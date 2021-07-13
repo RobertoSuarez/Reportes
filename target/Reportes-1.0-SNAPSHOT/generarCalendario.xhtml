@@ -11,35 +11,75 @@
     </h:head>
     <h:body>
         <div class="container contenedor-flex">
-            <h1>Generar Calendario</h1>
-            <h:form>
+            <h1 class="title">Generar Calendario</h1>
+            
+            <h:form class="formulario">
 
-                <p:outputLabel for="proveedor" value="Proveedor: "/>
-                <p:selectOneMenu id="proveedor"  style="width:250px">
-                    <f:selectItem itemLabel="Selecionar proveedor" itemValue="" noSelectionOption="true"/>
-                    <f:selectItem itemLabel="Proveedor 1" itemValue="" noSelectionOption="true"/>
-                </p:selectOneMenu>
+                <div style="display: flex; justify-content: flex-start; align-items: center; margin-top: 10px;">
+                    <p:outputLabel style="margin-right: 10px;" for="proveedor" value="Proveedor: "/>
+                    <p:selectOneMenu id="proveedor"  style="width:250px">
+                        <f:selectItem itemLabel="Selecionar proveedor" itemValue="" noSelectionOption="true"/>
+                        <f:selectItem itemLabel="Proveedor 1" itemValue="" noSelectionOption="true"/>
+                    </p:selectOneMenu>
+                </div>
+                
 
+                <div style=" 
+                     margin: 20px 0px 10px 0px;
+                     display: flex; 
+                     flex-direction: row; 
+                     justify-content: flex-start; 
+                     align-items: center;">
+                    
+                    <h5 style="margin-right: 10px;">Todos los proveedores</h5>
+                    <p:toggleSwitch />
 
-                <h5>Todos los proveedores</h5>
-                <p:toggleSwitch />
+                </div>
+                
+                <div style="
+                     display: flex;
+                     justify-content: space-around;
+                     align-items: center;
+                     margin: 20px 0px 10px 0px;
+                     ">
+                    <div>
+                        <p:outputLabel style="margin-right: 10px;" for="desde" value="Desde:"/>
+                        <p:datePicker id="desde"  />
+                    </div>
+                    
+                    <div>
+                        <p:outputLabel style="margin-right: 10px;" for="hasta" value="Hasta:"/>
+                        <p:datePicker id="hasta"  />
+                    </div>
+                    
+                </div>
+                
 
-                <p:outputLabel for="desde" value="Desde:"/>
-                <p:datePicker id="desde"  />
+                <div style=" 
+                     margin: 20px 0px 10px 0px;
+                     display: flex; 
+                     flex-direction: row; 
+                     justify-content: flex-start; 
+                     align-items: center;">
+                    
+                    <h5 style="margin-right: 10px;">Sin filtro de fechas</h5>
+                    <p:toggleSwitch />
 
-                <p:outputLabel for="hasta" value="Hasta:"/>
-                <p:datePicker id="hasta"  />
-
-                <h5>Sin filtro de fechas</h5>
-                <p:toggleSwitch />
-
-                <p:commandButton
+                </div>
+                
+                <div style="
+                     display: flex;
+                     justify-content: flex-end;
+                     ">
+                    <p:commandButton
                     value="Generar" 
                     styleClass="ui-button-success button" />
 
-                <p:button 
-                    value="Cancelar" 
-                    styleClass="ui-button-danger ui-button-outlined" />
+                    <p:button 
+                        value="Cancelar" 
+                        styleClass="ui-button-danger ui-button-outlined" />
+                </div>
+                
             </h:form>
         </div>
 
