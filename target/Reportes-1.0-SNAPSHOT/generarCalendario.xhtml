@@ -1,13 +1,48 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
-        <title>Facelet Title</title>
+        <title>Generar Calendario</title>
+        <link rel="stylesheet" href="#{request.contextPath}/css/main.css"/>
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' />
     </h:head>
     <h:body>
-        Hello from Facelets
-        pagina para generar calendario
+        <div class="container contenedor-flex">
+            <h1>Generar Calendario</h1>
+            <h:form>
+
+                <p:outputLabel for="proveedor" value="Proveedor: "/>
+                <p:selectOneMenu id="proveedor"  style="width:250px">
+                    <f:selectItem itemLabel="Selecionar proveedor" itemValue="" noSelectionOption="true"/>
+                    <f:selectItem itemLabel="Proveedor 1" itemValue="" noSelectionOption="true"/>
+                </p:selectOneMenu>
+
+
+                <h5>Todos los proveedores</h5>
+                <p:toggleSwitch />
+
+                <p:outputLabel for="desde" value="Desde:"/>
+                <p:datePicker id="desde"  />
+
+                <p:outputLabel for="hasta" value="Hasta:"/>
+                <p:datePicker id="hasta"  />
+
+                <h5>Sin filtro de fechas</h5>
+                <p:toggleSwitch />
+
+                <p:commandButton
+                    value="Generar" 
+                    styleClass="ui-button-success button" />
+
+                <p:button 
+                    value="Cancelar" 
+                    styleClass="ui-button-danger ui-button-outlined" />
+            </h:form>
+        </div>
+
     </h:body>
 </html>
 

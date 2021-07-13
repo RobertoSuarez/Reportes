@@ -20,10 +20,12 @@ import javax.faces.bean.SessionScoped;
 public class generatorReport {
 
     private String option;
+    public String data;
 
     public generatorReport() {
         System.out.println("init generator report");
         this.option = "option number one";
+        this.data = "data mas data mas data";
     }
 
     public String getOption() {
@@ -32,5 +34,13 @@ public class generatorReport {
 
     public void setOption(String option) {
         this.option = option;
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
     }
 }
