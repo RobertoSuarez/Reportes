@@ -1,0 +1,55 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 12/07/2021, 23:12:18
+    Author     : elect
+*/
+
+* {
+    margin: 0px;
+    font-family: 'Roboto';
+    
+}
+
+.container {
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.contenedor-flex {
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.formulario {
+ 
+    padding: 20px;
+    margin: 20px;
+    min-width: 700px;
+    
+}
+
+.title {
+    margin: 20px;
+}
+
+button.ui-button {
+    margin-right: .5rem;
+}
+
+.botones-form {
+    min-width: 700px;
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: flex-end;
+    align-items: center;
+    margin: 20px;
+}

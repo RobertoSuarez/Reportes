@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <link rel="stylesheet" href="#{request.contextPath}/css/main.css"/>
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' />
+
+    </h:head>
+    <h:body>
+        
+        <div class="container">
+            
+            <div class="contenedor-flex">
+                <h1 class="title">Generador de reportes</h1>
+                
+                <div class="formulario">
+                    <h:form >
+                        <h3>Selecionar un tipo de reporte</h3>
+                        <p:selectOneRadio layout="grid" columns="1" >
+                            <f:selectItem 
+                                itemLabel="Generar calendario de pagos" 
+                                itemValue="calendario"/>
+
+                            <f:selectItem 
+                                itemLabel="Reportes de cuentas por pagar" 
+                                itemValue="cuentas_por_pagar"/>
+
+                            <f:selectItem 
+                                itemLabel="Resumen pedientes de pagos" 
+                                itemValue="resumen_pendientes_de_pagos"/>
+
+                        </p:selectOneRadio>
+                        
+                        <div class="botones-form">
+                            
+                            <p:commandButton
+                                action="generarCalendario"
+                                value="Siguiente" 
+                                styleClass="ui-button-success button" />
+                            
+                            <p:button 
+                                value="Cancelar" 
+                                styleClass="ui-button-danger ui-button-outlined" />
+                            
+                            
+                        </div>
+                        
+
+                    </h:form>
+                </div>
+                
+            </div>
+
+        </div>
+        
+      
+        
+        
+    </h:body>
+</html>
+
